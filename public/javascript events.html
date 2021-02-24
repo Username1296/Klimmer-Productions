@@ -1,0 +1,201 @@
+<h1 align=center>T3A09-Events-Name</h1>
+
+
+1. Onclick event
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>This example demonstrates how to assign an "onclick" event to a p element.</p>
+
+<p id="demo" onclick="myFunction()">Click me.</p>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "YOU CLICKED ME!";
+}
+</script>
+
+</body>
+</html>
+
+
+
+2. onChange event
+
+
+
+<html>
+<body>
+
+<p>This example demonstrates how to assign an "onchange" event to an input element.</p>
+
+Enter your name: <input type="text" id="fname" onchange="myFunction()">
+
+<p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("fname");
+  x.value = x.value.toUpperCase();
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+3. onMouseOver
+
+
+
+
+<html>
+<body>
+
+<p>This example demonstrates how to assign an "onmouseover" and "onmouseout" event to a h1 element.</p>
+
+<h1 id="demo" onmouseover="mouseOver()" onmouseout="mouseOut()">Mouse over me</h1>
+
+<script>
+function mouseOver() {
+  document.getElementById("demo").style.color = "red";
+}
+
+function mouseOut() {
+  document.getElementById("demo").style.color = "black";
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+4. onMouseOut
+
+
+
+
+<html>
+<body>
+
+<p>This example demonstrates how to assign an "onmouseover" and "onmouseout" event to a h1 element.</p>
+
+<h1 id="demo" onmouseover="mouseOver()" onmouseout="mouseOut()">Mouse over me</h1>
+
+<script>
+function mouseOver() {
+  document.getElementById("demo").style.color = "red";
+}
+
+function mouseOut() {
+  document.getElementById("demo").style.color = "black";
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+5. onFocus
+
+
+
+
+<html>
+<body>
+
+<p>This example demonstrates how to assign an "onfocus" event to an input element.</p>
+
+Enter your name: <input type="text" id="fname" onfocus="myFunction()">
+
+<script>
+function myFunction() {
+  document.getElementById("fname").style.backgroundColor = "red";
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+6. onLoad
+
+
+
+<html>
+<body>
+
+<p>This example demonstrates how to assign an "onload" event to an iframe element.</p>
+
+<iframe onload="myFunction()" src="/default.asp"></iframe>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Iframe is loaded.";
+}
+</script>
+
+</body>
+</html>
+
+
+
+7. onError
+
+
+
+
+<html>
+<body>
+
+<p>This example demonstrates how to assign an "onerror" event to an img element.</p>
+
+<img src="image.gif" onerror="myFunction()">
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "The image could not be loaded.";
+}
+</script>
+
+</body>
+</html>
+
+
+
+8. onDbleClick
+
+
+
+<html>
+<body>
+
+<p>This example demonstrates how to assign an "ondblclick" event to a p element.</p>
+
+<p id="demo" ondblclick="myFunction()">Double-click me.</p>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "I was double-clicked!";
+}
+</script>
+
+</body>
+</html>
+
