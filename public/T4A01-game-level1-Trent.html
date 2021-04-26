@@ -95,9 +95,19 @@ Life: <input id="myTextLife" type=number value=20 ><br><br>
                         
 }">
 
+<input type=button value="Move 10 pixels Up" onClick="{
+                        
+  document.getElementById('mySpan01').style.up = parseInt(document.getElementById('mySpan01').style.up) + 10
+  myCheckAll()
+                        
+}">
 
-
-
+<input type=button value="Move 10 pixels Down" onClick="{
+                        
+  document.getElementById('mySpan01').style.down = parseInt(document.getElementById('mySpan01').style.down) - 10
+  myCheckAll()
+                        
+}">
 
 
 <div id="myDiv01">...</div>
