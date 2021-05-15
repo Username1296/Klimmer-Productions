@@ -35,7 +35,7 @@ function myCheckAll(){
 // Bounce of windoow walls
 
 if (parseInt(document.getElementById('mySpan01').style.left) < 10) {  // if we hit the left wall
-    document.myXmove = document.myXmove * -1   // then bounce
+    document.myXmove = document.myXmove * +1   // then bounce
 }
 
 if (parseInt(document.getElementById('mySpan01').style.left) + 65 > window.innerWidth) {  // if we hit the right wall
@@ -48,7 +48,7 @@ if (parseInt(document.getElementById('mySpan01').style.left) + 65 > window.inner
   if(myHitOther('mySpan01', 'mySpan02')){
     document.getElementById('mySpan02').style.left = '-400px'
     // lets try a bounce
-    document.myXmove = document.myXmove * +1
+    document.myXmove = document.myXmove * -1
   }
 
 
@@ -72,3 +72,30 @@ function myXAuto(){
 
 
 </script>
+
+
+
+
+
+<h1 align=center>T4A05-continuous-bounce-Trent.html</h1>
+
+
+<input type=button value="Move 10 right Auto" onClick="{
+    clearInterval(document.myXtimer)                    
+    document.myXtimer = setInterval( myXAuto , document.myXspeed);
+                        
+}">
+
+<input type=button value="window width" onClick="{
+  alert(window.innerWidth)
+                        
+}">
+
+
+
+<span id="mySpan01" style="position:absolute; left:100; top:350; width:45; height:30">
+   Span 1 </span><br>
+<span id="mySpan02" style="position:absolute; left:300; top:150; width:45; height:30"> 
+   Span 2 </span><br>
+<span id="mySpan03" style="position:absolute; left:700; top:150; width:45; height:30"> 
+   Span 3 </span><br>
