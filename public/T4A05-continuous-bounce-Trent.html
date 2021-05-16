@@ -35,11 +35,11 @@ function myCheckAll(){
 // Bounce of windoow walls
 
 if (parseInt(document.getElementById('mySpan01').style.left) < 10) {  // if we hit the left wall
-    document.myXmove = document.myXmove * -1   // then bounce
+    document.myXmove = document.myXmove * +1   // then bounce
 }
 
 if (parseInt(document.getElementById('mySpan01').style.left) + 65 > window.innerWidth) {  // if we hit the right wall
-    document.myXmove = document.myXmove * -1   // then bounce
+    document.myXmove = document.myXmove * +1   // then bounce
 }
 
 
