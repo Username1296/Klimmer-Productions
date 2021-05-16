@@ -38,7 +38,7 @@ if (parseInt(document.getElementById('mySpan01').style.left) < 10) {  // if we h
     document.myXmove = document.myXmove * -1   // then bounce
 }
 
-if (parseInt(document.getElementById('mySpan01').style.left) + 65) {  // if we hit the right wall
+if (parseInt(document.getElementById('mySpan01').style.left) + 65 > window.innerWidth) {  // if we hit the right wall
     document.myXmove = document.myXmove * -1   // then bounce
 }
 
