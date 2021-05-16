@@ -62,8 +62,10 @@ if (parseInt(document.getElementById('mySpan01').style.left) + 65 > window.inner
   // your other checks go here
 
 }
-
-
+.image{
+  position: relative; 
+  top: -125px;
+}
 function myXAuto(){
   document.getElementById('mySpan01').style.left = parseInt(document.getElementById('mySpan01').style.left) + document.myXmove
   myCheckAll()
