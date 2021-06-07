@@ -94,20 +94,21 @@ Life: <input id="myTextLife" type=number value=20 ><br><br>
 <input type=button value="Right" onClick="{
                         
   document.getElementById('mySpan01').style.left = parseInt(document.getElementById('mySpan01').style.left) + 10
-  myCheckAll()
-                        
+  document.getElementById('mySpan06').style.left = parseInt(document.getElementById('mySpan06').style.left) + 10
+  myCheckAll()                      
 }">
 
 <input type=button value="Left" onClick="{
                         
   document.getElementById('mySpan01').style.left = parseInt(document.getElementById('mySpan01').style.left) - 10
-  myCheckAll()
-                        
+  document.getElementById('mySpan06').style.left = parseInt(document.getElementById('mySpan06').style.left) - 10
+  myCheckAll()                       
 }">
 
 <input type=button value="Down" onClick="{
                         
   document.getElementById('mySpan01').style.top = parseInt(document.getElementById('mySpan01').style.top) + 10
+  document.getElementById('mySpan06').style.top = parseInt(document.getElementById('mySpan06').style.top) + 10
   myCheckAll()
                         
 }">
@@ -115,6 +116,7 @@ Life: <input id="myTextLife" type=number value=20 ><br><br>
 <input type=button value="Up" onClick="{
                         
   document.getElementById('mySpan01').style.top = parseInt(document.getElementById('mySpan01').style.top) - 10
+  document.getElementById('mySpan06').style.top = parseInt(document.getElementById('mySpan06').style.top) - 10
   myCheckAll()
                         
 }">
