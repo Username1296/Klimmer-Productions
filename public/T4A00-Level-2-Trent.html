@@ -60,22 +60,27 @@ function myHitOther(my1,my2){
      document.getElementById('myDiv01').innerHTML = 'You typed: ' + myAlphaKey.toLowerCase()
       if (myAlphaKey.toLowerCase() == 'arrowright') {
          document.getElementById('mySpan01').style.left = parseInt(document.getElementById('mySpan01').style.left) + 10
+         document.getElementById('mySpan06').style.left = parseInt(document.getElementById('mySpan06').style.left) + 10
          myCheckAll()
      }
       if (myAlphaKey.toLowerCase() == 'd') {   // go right
          document.getElementById('mySpan01').style.left = parseInt(document.getElementById('mySpan01').style.left) + 10
+         document.getElementById('mySpan06').style.left = parseInt(document.getElementById('mySpan06').style.left) + 10
          myCheckAll()
      }
       if (myAlphaKey.toLowerCase() == 'a') {   // go left
          document.getElementById('mySpan01').style.left = parseInt(document.getElementById('mySpan01').style.left) - 10
+         document.getElementById('mySpan06').style.left = parseInt(document.getElementById('mySpan06').style.left) - 10
          myCheckAll()
       }
        if (myAlphaKey.toLowerCase() == 'w') {   // go up
          document.getElementById('mySpan01').style.top = parseInt(document.getElementById('mySpan01').style.top) - 10
+         document.getElementById('mySpan06').style.top = parseInt(document.getElementById('mySpan06').style.top) - 10
          myCheckAll()
       }
       if (myAlphaKey.toLowerCase() == 's') {   // go down
          document.getElementById('mySpan01').style.top = parseInt(document.getElementById('mySpan01').style.top) + 10
+         document.getElementById('mySpan06').style.top = parseInt(document.getElementById('mySpan06').style.top) + 10
          myCheckAll()
       }
 }">
