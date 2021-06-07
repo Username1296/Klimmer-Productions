@@ -93,6 +93,12 @@ function myHitOther(my1,my2){
 <h1 align=center>T4A00-level-2-Trent.html</h1>
 
 
+<input type=button value="Fire" onClick="{
+    document.myNumBullets += 1
+    if (document.myNumBullets > document.myBulletMax){
+       document.myNumBullets = 1
+    }
+
 Life: <input id="myTextLife" type=number value=20 ><br><br>
 
 
@@ -142,3 +148,17 @@ Life: <input id="myTextLife" type=number value=20 ><br><br>
   <img src="Faceless Mask.gif" width=100 > </span><br>
 <span title="6" id="mySpan06" style="visibility:hidden; position:absolute; left:100; top:450; width:45; height:30"> 
   <img src="Trent Klimmer right view holding gun.gif" width=100 > </span><br>
+
+                                                     
+                                                     
+ <span title="b1" id="myBullet1" style="visibility:hidden; position:absolute; left:100; top:150; width:45; height:30">
+<font color=red>x</font></span><br>
+
+<span title="b2" id="myBullet2" style="visibility:hidden; position:absolute; left:100; top:150; width:45; height:30">
+<font color=green>x</font></span><br>
+
+<span title="b3" id="myBullet3" style="visibility:hidden; position:absolute; left:100; top:150; width:45; height:30">
+<font color=yellow>x</font></span><br>
+
+<span title="b4" id="myBullet4" style="visibility:hidden; position:absolute; left:100; top:150; width:45; height:30">
+<font color=blue>x</font></span><br>
