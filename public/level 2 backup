@@ -1,0 +1,148 @@
+<body id="myBody" style="background-size: 100% 100%" background="home-bg.jpg">
+<script>
+function myHitOther(my1,my2){
+   left1   = parseInt(document.getElementById(my1).style.left)
+   right1  = left1 + parseInt(document.getElementById(my1).style.width)
+   top1    = parseInt(document.getElementById(my1).style.top)   
+   bottom1 = top1   + parseInt(document.getElementById(my1).style.height)
+   left2   = parseInt(document.getElementById(my2).style.left)
+   right2  = left2 + parseInt(document.getElementById(my2).style.width)
+   top2    = parseInt(document.getElementById(my2).style.top)   
+   bottom2 = top2   + parseInt(document.getElementById(my2).style.height)
+   if ((right1  >=  left2  ) &&      	   
+       (bottom1 >=  top2   ) &&
+       (left1   <=  right2 ) &&
+       (top1    <=  bottom2) ){
+       return true
+   }
+}
+
+   
+   function myCheckAll(){
+
+  if(myHitOther('mySpan01', 'mySpan02')){
+    document.getElementById('mySpan02').style.left = '-400px'
+    document.getElementById('mySpan01').style.visibility = 'hidden'
+    document.getElementById('mySpan06').style.visibility = 'visible'
+  }
+
+  if(myHitOther('mySpan01', 'mySpan03')){
+    document.getElementById('myTextLife').value = parseInt(document.getElementById('myTextLife').value) - 1
+  }
+
+
+
+  // your other checks go here
+
+  if(parseInt(document.getElementById('myTextLife').value)  <=0  ){    // life points at zero
+    alert('You Lose!')
+    location = 'game over background.html'     // refresh page
+  }
+
+  if(myHitOther('mySpan01', 'mySpan09')){
+    document.getElementById('mySpan09').style.left = '-400px'
+    alert('You Win!')
+    location = 'https://google.ca'
+  }
+
+
+
+
+}
+
+
+</script>
+</head>
+
+
+<body  onKeyDown="{
+     let myAlphaKey = event.key
+     document.getElementById('myDiv01').innerHTML = 'You typed: ' + myAlphaKey.toLowerCase()
+      if (myAlphaKey.toLowerCase() == 'arrowright') {
+         document.getElementById('mySpan01').style.left = parseInt(document.getElementById('mySpan01').style.left) + 10
+         document.getElementById('mySpan06').style.left = parseInt(document.getElementById('mySpan06').style.left) + 10
+         myCheckAll()
+     }
+      if (myAlphaKey.toLowerCase() == 'd') {   // go right
+         document.getElementById('mySpan01').style.left = parseInt(document.getElementById('mySpan01').style.left) + 10
+         document.getElementById('mySpan06').style.left = parseInt(document.getElementById('mySpan06').style.left) + 10
+         myCheckAll()
+     }
+      if (myAlphaKey.toLowerCase() == 'a') {   // go left
+         document.getElementById('mySpan01').style.left = parseInt(document.getElementById('mySpan01').style.left) - 10
+         document.getElementById('mySpan06').style.left = parseInt(document.getElementById('mySpan06').style.left) - 10
+         myCheckAll()
+      }
+       if (myAlphaKey.toLowerCase() == 'w') {   // go up
+         document.getElementById('mySpan01').style.top = parseInt(document.getElementById('mySpan01').style.top) - 10
+         document.getElementById('mySpan06').style.top = parseInt(document.getElementById('mySpan06').style.top) - 10
+         myCheckAll()
+      }
+      if (myAlphaKey.toLowerCase() == 's') {   // go down
+         document.getElementById('mySpan01').style.top = parseInt(document.getElementById('mySpan01').style.top) + 10
+         document.getElementById('mySpan06').style.top = parseInt(document.getElementById('mySpan06').style.top) + 10
+         myCheckAll()
+      }
+}">
+
+
+
+</script>
+
+
+
+
+<h1 align=center>T4A00-level-2-Trent.html</h1>
+
+
+Life: <input id="myTextLife" type=number value=20 ><br><br>
+
+
+<input type=button value="Right" onClick="{
+                        
+  document.getElementById('mySpan01').style.left = parseInt(document.getElementById('mySpan01').style.left) + 10
+  document.getElementById('mySpan06').style.left = parseInt(document.getElementById('mySpan06').style.left) + 10
+  myCheckAll()                      
+}">
+
+<input type=button value="Left" onClick="{
+                        
+  document.getElementById('mySpan01').style.left = parseInt(document.getElementById('mySpan01').style.left) - 10
+  document.getElementById('mySpan06').style.left = parseInt(document.getElementById('mySpan06').style.left) - 10
+  myCheckAll()                       
+}">
+
+<input type=button value="Down" onClick="{
+                        
+  document.getElementById('mySpan01').style.top = parseInt(document.getElementById('mySpan01').style.top) + 10
+  document.getElementById('mySpan06').style.top = parseInt(document.getElementById('mySpan06').style.top) + 10
+  myCheckAll()
+                        
+}">
+
+<input type=button value="Up" onClick="{
+                        
+  document.getElementById('mySpan01').style.top = parseInt(document.getElementById('mySpan01').style.top) - 10
+  document.getElementById('mySpan06').style.top = parseInt(document.getElementById('mySpan06').style.top) - 10
+  myCheckAll()
+                        
+}">
+
+
+<div id="myDiv01">...</div>
+
+
+
+
+<span title="1" id="mySpan01" style="visibility:visible; position:absolute; left:100; top:450; width:45; height:30">
+  <img src="Trent Klimmer front view clone (1).gif" width=100 > </span><br>
+<span title="3" id="mySpan03" style="position:absolute; left:400; top:450; width:45; height:30"> 
+  <img src="Weed Eater Mask.gif" width=100 > </span><br>
+<span title="2" id="mySpan02" style="position:absolute; left:200; top:450; width:45; height:30"> 
+  <img src="gun.gif" width=100 > </span><br>
+<span title="9" id="mySpan09" style="position:absolute; left:900; top:450; width:45; height:30"> 
+  <img src="Faceless Mask.gif" width=100 > </span><br>
+<span title="6" id="mySpan06" style="visibility:hidden; position:absolute; left:100; top:450; width:45; height:30"> 
+  <img src="Trent Klimmer right view holding gun.gif" width=100 > </span><br>
+<span title="5" id="mySpan05" style="visibility:hidden; position:absolute; left:100; top:450; width:45; height:30"> 
+  <img src="" width=100 > </span><br>
