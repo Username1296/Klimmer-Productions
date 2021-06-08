@@ -89,6 +89,21 @@ function myHitOther(my1,my2){
       }
 }">
 
+
+  // your other checks go here
+
+}
+
+
+function myBulletFire(){
+
+  for (let x=1;  x <= document.myBulletMax; x++){
+     document.getElementById('myBullet'+x).style.left = parseInt(document.getElementById('myBullet'+x).style.left) + document.myBulletMove
+  }
+
+  myCheckAll()
+}
+
 </script>
 
 
