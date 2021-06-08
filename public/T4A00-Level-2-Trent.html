@@ -83,26 +83,9 @@ function myHitOther(my1,my2){
          document.getElementById('mySpan06').style.top = parseInt(document.getElementById('mySpan06').style.top) + 10
          myCheckAll()
       }
-      if (myAlphaKey.toLowerCase() == 'f') {   // shoot
-         document.getElementById('mySpan06').style.top = parseInt(document.getElementById('mySpan06').style.top) + 10
-         myCheckAll()
-      }
 }">
 
 
-  // your other checks go here
-
-}
-
-
-function myBulletFire(){
-
-  for (let x=1;  x <= document.myBulletMax; x++){
-     document.getElementById('myBullet'+x).style.left = parseInt(document.getElementById('myBullet'+x).style.left) + document.myBulletMove
-  }
-
-  myCheckAll()
-}
 
 </script>
 
@@ -114,11 +97,6 @@ function myBulletFire(){
 
 Life: <input id="myTextLife" type=number value=20 ><br><br>
 
-<input type=button value="Fire" onClick="{
-    document.myNumBullets += 1
-    if (document.myNumBullets > document.myBulletMax){
-       document.myNumBullets = 1
-    }
 
 <input type=button value="Right" onClick="{
                         
