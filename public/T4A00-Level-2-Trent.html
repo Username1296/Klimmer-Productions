@@ -30,7 +30,10 @@ function myHitOther(my1,my2){
     document.getElementById('myTextLife').value = parseInt(document.getElementById('myTextLife').value) - 1
   }
 
-
+  if(myHitOther('mySpan05', 'mySpan03')){
+    document.getElementById('mySpan05').style.left = '-400px'
+    document.getElementById('mySpan03').style.left = '-400px'
+  }
 
   // your other checks go here
 
@@ -44,11 +47,6 @@ function myHitOther(my1,my2){
     alert('You Win!')
     location = 'https://google.ca'
   }
-
-  if(myHitOther('mySpan05', 'mySpan03')){
-    document.getElementById('mySpan05').style.left = '-400px'
-    document.getElementById('mySpan03').style.left = '-400px'
-}
 
 
 </script>
